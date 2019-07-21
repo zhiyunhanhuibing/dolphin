@@ -26,6 +26,8 @@ spring:
     password:
     #连接超时时间
     timeout: 5000
+  application:
+    name: dolphin-manager
 
 #七牛云
 qiniu:
@@ -39,3 +41,12 @@ code:
 #登录图形验证码有效时间/分钟
 loginCode:
   expiration: 2
+
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+    prefer-ip-address: true
+

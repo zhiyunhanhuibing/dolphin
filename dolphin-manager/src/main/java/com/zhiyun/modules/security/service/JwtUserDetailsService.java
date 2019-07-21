@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 /**
+ * 认证的用户信息来源R
  * @author Zheng Jie
  * @date 2018-11-22
  */

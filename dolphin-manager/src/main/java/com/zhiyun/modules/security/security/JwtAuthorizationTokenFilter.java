@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * OncePerRequestFilter顾名思义，他能够确保在一次请求只通过一次filter，而不需要重复执行
+ */
 @Slf4j
 @Component
 public class JwtAuthorizationTokenFilter extends OncePerRequestFilter {
@@ -25,6 +28,12 @@ public class JwtAuthorizationTokenFilter extends OncePerRequestFilter {
     private final JwtTokenUtil jwtTokenUtil;
     private final String tokenHeader;
 
+    /**
+     * qualifier的意思是合格者，通过这个标示，表明了哪个实现类才是我们所需要的
+     * @param userDetailsService
+     * @param jwtTokenUtil
+     * @param tokenHeader
+     */
     public JwtAuthorizationTokenFilter(@Qualifier("jwtUserDetailsService") UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil, @Value("${jwt.header}") String tokenHeader) {
         this.userDetailsService = userDetailsService;
         this.jwtTokenUtil = jwtTokenUtil;
@@ -58,6 +67,7 @@ public class JwtAuthorizationTokenFilter extends OncePerRequestFilter {
             if (jwtTokenUtil.validateToken(authToken, userDetails)) {
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                //han 将 AuthenticationManager 返回的 Authentication 对象赋予给当前的 SecurityContext
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         }
