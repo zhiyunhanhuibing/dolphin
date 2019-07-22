@@ -46,7 +46,7 @@ loginCode:
 eureka:
   client:
     service-url:
-      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/, http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
+      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/,http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
   instance:
     prefer-ip-address: true
 
