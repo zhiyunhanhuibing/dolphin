@@ -21,9 +21,9 @@ spring:
   redis:
     #数据库索引
     database: 0
-    host: 127.0.0.1
+    host: 129.28.187.140
     port: 6379
-    password:
+    password: hanhuibing
     #连接超时时间
     timeout: 5000
   application:
@@ -46,7 +46,7 @@ loginCode:
 eureka:
   client:
     service-url:
-      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/,http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
+      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/,  http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
   instance:
-    prefer-ip-address: true
+    hostname: dolphin-manager
 

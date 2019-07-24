@@ -1,0 +1,26 @@
+#服务信息
+server:
+  port: 9003
+spring:
+  application:
+    name: dolphin-geteway
+
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/,http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
+  instance:
+    prefer-ip-address: true
+
+#路由规则
+#这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了，如果单独使用zuul,那么就必须写自己机器的IP了，
+#如url:http://localhost:8080/  这样的不好就是写死IP了，万一这IP挂了，这高可用性，服务注册那套东西就用不起来了
+#sensitiveHeaders会过滤客户端附带的headers
+zuul:
+  routes:
+    dolphin-manager:
+      path: /auth/**
+      /#sensitiveHeaders: "*"
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+      serviceId: dolphin-manager

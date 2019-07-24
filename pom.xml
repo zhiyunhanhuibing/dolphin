@@ -13,7 +13,8 @@
         <module>dolphin-common</module><!--通用-->
         <module>dolphin-logging</module><!--日志-->
         <module>dolphin-tools</module>
-        <module>dolphin-eureka</module><!--工具-->
+        <module>dolphin-eureka</module>
+        <module>dolphin-zuul</module><!--工具-->
     </modules>
     <packaging>pom</packaging>
 
