@@ -20,3 +20,9 @@
 * 更新代码至最新后，首先编译dolphin下的pom文件，生成各个子工程所需依赖    
 * 为简化配置，需在hosts配置文件中配置：  
     127.0.0.1 com.dolphin.eureka1 com.dolphin.eureka2    
+* 更新项目所需依赖，编译dolphin生成所需依赖
+* 启动注册中心节点1
+    C:\Users\Administrator\.m2\repository\com\zhiyun\dolphin-eureka\1.0-SNAPSHOT通过执行dos命令  
+     java -jar .\dolphin-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=node1
+* 启动网关服务  
+

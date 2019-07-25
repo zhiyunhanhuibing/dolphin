@@ -20,7 +20,7 @@ eureka:
 zuul:
   routes:
     dolphin-manager:
+      sensitiveHeaders:
       path: /auth/**
-      /#sensitiveHeaders: "*"
-      sensitiveHeaders: Cookie,Set-Cookie,Authorization
       serviceId: dolphin-manager
+  sensitiveHeaders:
