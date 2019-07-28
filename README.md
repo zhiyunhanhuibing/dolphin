@@ -9,7 +9,7 @@
         dolphin-zuul：网关  
         dolphin-eureka：注册中心  
  ##   架构图
-    ![dolphin架构图] （https://github.com/zhiyunhanhuibing/dolphin/blob/master/images/jgt.png  ''dolphin架构图'')
+    ![github]（https://github.com/zhiyunhanhuibing/dolphin/blob/master/images/jgt.png "dolphin架构图")
  
  # 模块说明
   ## 系统管理模块(dolphin-manager)
