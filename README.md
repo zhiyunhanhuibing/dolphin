@@ -9,8 +9,11 @@
         dolphin-zuul：网关  
         dolphin-eureka：注册中心  
  ##   架构图
-    ![github](https://github.com/zhiyunhanhuibing/dolphin/blob/master/images/jgt.png "dolphin架构图")
-    ![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
+ ![](images/jgt.png)
+ 
+ ##   网络部署图
+  ![](images/bst.png)
+ 
  # 模块说明
   ## 系统管理模块(dolphin-manager)
  * 基于SpringSecurity实现登录
