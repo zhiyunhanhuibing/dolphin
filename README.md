@@ -1,4 +1,5 @@
-# 架构摘要  
+# 架构摘要 
+## 工程结构   
     dolphin  
         dolphin-manager：系统管理    
         dolphin-common：公共  
@@ -6,6 +7,9 @@
         dolphin-logging：日志     
         dolphin-zuul：网关  
         dolphin-eureka：注册中心  
+ ##   架构图
+    ![dolphin架构图]（images/jgt.png  ''dolphin架构图''）
+ 
  # 模块说明
   ## 系统管理模块(dolphin-manager)
  * 基于SpringSecurity实现登录
