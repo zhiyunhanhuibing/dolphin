@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-11-23
  */
 public class EntityNotFoundException extends RuntimeException {

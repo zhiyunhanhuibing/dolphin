@@ -5,7 +5,7 @@ import com.zhiyun.annotation.Query;
 
 /**
  * 日志查询类
- * @author Zheng Jie
+ * @author
  * @date 2019-6-4 09:23:07
  */
 @Data

@@ -3,7 +3,7 @@ package com.zhiyun.mapper;
 import java.util.List;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-11-23
  */
 public interface EntityMapper<D, E> {

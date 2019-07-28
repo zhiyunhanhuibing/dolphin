@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 /**
  * 可自行扩展
- * @author Zheng Jie
+ * @author
  * @date 2018-12-10
  */
 public interface RedisService {

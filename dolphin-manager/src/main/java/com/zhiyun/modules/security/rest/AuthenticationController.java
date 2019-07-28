@@ -28,7 +28,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-11-23
  * 授权、根据token获取用户详细信息
  */

@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-12-10
  */
 @Data

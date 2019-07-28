@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * 邮件配置类，数据存覆盖式存入数据存
- * @author Zheng Jie
+ * @author
  * @date 2018-12-26
  */
 @Entity

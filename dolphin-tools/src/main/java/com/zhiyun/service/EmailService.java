@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-12-26
  */
 @CacheConfig(cacheNames = "email")

@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * 支付宝配置类
- * @author Zheng Jie
+ * @author
  * @date 2018-12-31
  */
 @Data

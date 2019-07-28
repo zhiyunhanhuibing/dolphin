@@ -14,7 +14,7 @@ import java.util.Optional;
 
 /**
  * 认证的用户信息来源R
- * @author Zheng Jie
+ * @author
  * @date 2018-11-22
  */
 @Service

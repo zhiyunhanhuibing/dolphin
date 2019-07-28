@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018/11/15 9:20:19
  *
  */

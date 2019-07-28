@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 /**
  * pv 与 ip 统计
  *
- * @author Zheng Jie
+ * @author
  * @date 2018-12-13
  */
 @Entity

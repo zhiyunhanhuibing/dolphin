@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-11-24
  */
 @Repository

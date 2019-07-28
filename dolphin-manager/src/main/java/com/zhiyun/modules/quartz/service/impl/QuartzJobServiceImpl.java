@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2019-01-07
  */
 @Service(value = "quartzJobService")

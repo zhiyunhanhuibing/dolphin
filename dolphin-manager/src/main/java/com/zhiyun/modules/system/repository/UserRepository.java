@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Date;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-11-22
  */
 public interface UserRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor {

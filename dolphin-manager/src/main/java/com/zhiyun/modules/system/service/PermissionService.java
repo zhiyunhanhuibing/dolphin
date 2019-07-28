@@ -10,7 +10,7 @@ import org.springframework.cache.annotation.Cacheable;
 import java.util.List;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-12-08
  */
 @CacheConfig(cacheNames = "permission")

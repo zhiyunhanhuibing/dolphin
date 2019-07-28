@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2019-5-22
  */
 @Data

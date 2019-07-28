@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2018-12-26
  */
 @RestController

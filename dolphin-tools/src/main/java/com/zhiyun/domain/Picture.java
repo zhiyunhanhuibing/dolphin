@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 /**
  * sm.ms图床
  *
- * @author Zheng Jie
+ * @author
  * @date 2018-12-27
  */
 @Data

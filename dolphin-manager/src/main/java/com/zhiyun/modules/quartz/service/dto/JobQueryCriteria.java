@@ -4,7 +4,7 @@ import lombok.Data;
 import com.zhiyun.annotation.Query;
 
 /**
- * @author Zheng Jie
+ * @author
  * @date 2019-6-4 10:33:02
  */
 @Data
