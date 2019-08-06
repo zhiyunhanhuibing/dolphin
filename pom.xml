@@ -8,6 +8,7 @@
     <artifactId>dolphin</artifactId><!--子模块名称-->
     <version>1.0-SNAPSHOT</version><!--系统版本-->
 
+
     <!--s声明系统子模块信息-->
     <modules>
         <module>dolphin-manager</module><!--系统管理-->
