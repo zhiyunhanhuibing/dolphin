@@ -28,7 +28,10 @@ spring:
     timeout: 5000
   application:
     name: dolphin-manager
-
+  security:
+    user:
+      name: manager
+      password: manager
 #七牛云
 qiniu:
   # 文件大小 /M
@@ -46,7 +49,9 @@ loginCode:
 eureka:
   client:
     service-url:
-      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/, http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
+      defaultZone: http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/,http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/
   instance:
     hostname: dolphin-manager
-
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}

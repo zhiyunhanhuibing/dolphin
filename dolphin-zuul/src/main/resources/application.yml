@@ -4,7 +4,10 @@ server:
 spring:
   application:
     name: dolphin-geteway
-
+  security:
+    user:
+      name: zuul
+      password: zuul
 #注册中心
 eureka:
   client:
@@ -16,6 +19,9 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     #告诉服务端，如果我20s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
     lease-expiration-duration-in-seconds: 20
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
 #路由规则
 #这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了，如果单独使用zuul,那么就必须写自己机器的IP了，
 #如url:http://localhost:8080/  这样的不好就是写死IP了，万一这IP挂了，这高可用性，服务注册那套东西就用不起来了
@@ -35,21 +41,21 @@ zuul:
       sensitiveHeaders:
       path: /mastery-web/**
       serviceId: mastery-web
-#
-  host:
-    connect-timeout-millis: 9000
-    socket-timeout-millis: 9000
-#
-ribbon:
-  ReadTimeout: 9000
-  ConnectTimeout: 9000
-#熔断机制超时
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+##
+#  host:
+#    connect-timeout-millis: 9000
+#    socket-timeout-millis: 9000
+##
+#ribbon:
+#  ReadTimeout: 9000
+#  ConnectTimeout: 9000
+##熔断机制超时
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: true
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
