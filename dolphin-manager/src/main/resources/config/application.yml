@@ -28,10 +28,12 @@ spring:
     timeout: 5000
   application:
     name: dolphin-manager
+#  安全校验
   security:
     user:
-      name: manager
-      password: manager
+      name: user
+      password: hanhuibing
+
 #七牛云
 qiniu:
   # 文件大小 /M
@@ -49,9 +51,20 @@ loginCode:
 eureka:
   client:
     service-url:
-      defaultZone: http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/,http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/
+      defaultZone: http://user:hanhuibing@com.dolphin.eureka2:9002/eureka/, http://user:hanhuibing@com.dolphin.eureka1:9001/eureka/
   instance:
     hostname: dolphin-manager
+    health-check-url-path: /actuator/health
     metadata-map:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
+
+logging:
+  file: /var/log/sample-boot-application.log
+  pattern:
+    file: clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
