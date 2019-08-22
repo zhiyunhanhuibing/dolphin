@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: dolphin-geteway
+  #安全校验
   security:
     user:
-      name: zuul
-      password: zuul
+      name: user
+      password: hanhuibing
+
 #注册中心
 eureka:
   client:
@@ -19,6 +21,7 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     #告诉服务端，如果我20s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
     lease-expiration-duration-in-seconds: 20
+    health-check-url-path: /actuator/health
     metadata-map:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
@@ -39,23 +42,14 @@ zuul:
     #网站后台管理服务
     mastery-web:
       sensitiveHeaders:
-      path: /mastery-web/**
+      path: /mastery/**
       serviceId: mastery-web
-##
-#  host:
-#    connect-timeout-millis: 9000
-#    socket-timeout-millis: 9000
-##
-#ribbon:
-#  ReadTimeout: 9000
-#  ConnectTimeout: 9000
-##熔断机制超时
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        timeout:
-#          enabled: true
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 60000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  file: /var/log/sample-boot-application.log
+  pattern:
+    file: clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx
