@@ -16,6 +16,7 @@
         <module>dolphin-tools</module><!--工具-->
         <module>dolphin-eureka</module><!--注册中心-->
         <module>dolphin-zuul</module><!--网关服务-->
+        <module>dolphin-admin</module><!--服务监控-->
     </modules>
 
     <!--声明该项目为聚合工程，在构建的父工程的时候，它会将这些子模块包含到要构建的项目中-->
@@ -31,7 +32,7 @@
         <swagger.version>2.9.2</swagger.version>
         <fastjson.version>1.2.54</fastjson.version>
         <druid.version>1.1.10</druid.version>
-        <hutool.version>[4.1.12,)</hutool.version>
+        <hutool.version>4.6.2</hutool.version>
         <commons-pool2.version>2.5.0</commons-pool2.version>
         <mapstruct.version>1.2.0.Final</mapstruct.version>
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
@@ -70,10 +71,16 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+            <!--安全检测-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <!--健康检测-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
             </dependency>
             <!-- spring cache -->
             <dependency>
